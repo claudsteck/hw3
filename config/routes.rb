@@ -5,4 +5,6 @@ resources "places"
   # get("/", { :controller => "articles", :action => "index" })
   
   get("/", { :controller => "places", :action => "index" })
+
+resources "entries"
 end
