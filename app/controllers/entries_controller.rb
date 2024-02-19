@@ -13,6 +13,7 @@ class EntriesController < ApplicationController
     @place = Place.find_by({"id" => params["id"]})
     @entry = Entry.find_by({"id" => @place["place_id"]})
     # render entries/show view with details about place
+  end
 
 
   def create
