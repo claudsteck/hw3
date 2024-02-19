@@ -1,7 +1,7 @@
 class EntriesController < ApplicationController
   
   def new
-    @entry = Entry.all
+    @place = Place.find_by({"id" => params["id"]})
     # render new view with new entry form
   end 
 
