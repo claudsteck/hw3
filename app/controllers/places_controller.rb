@@ -7,6 +7,14 @@ class PlacesController < ApplicationController
   render :template => 'places/index'
   end
 
+  def show
+    # find a Place
+    @place = Place.find_by({ "id" => params["id"] })
+    # find Entries for the Place
+    @entries = Entry.where({ "place_id" => @place["id"] })
+    # render places/show view with entries from the place
+  end
+
   def new
     # render view with new places form
   end
