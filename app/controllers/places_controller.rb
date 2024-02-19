@@ -2,17 +2,15 @@ class PlacesController < ApplicationController
 
   def index
     @places = Place.all
-  
     #render places index view
-  render :template => 'places/index'
+
   end
 
   def show
     # find a Place
-    @place = Place.find_by({ "id" => params["id"] })
-    # find Entries for the Place
+    @place = Place.find_by({"id" => params["id"]})
     @entries = Entry.where({ "place_id" => @place["id"] })
-    # render places/show view with entries from the place
+    # render companies/show view with details about Company
   end
 
   def new

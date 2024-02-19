@@ -11,7 +11,7 @@ class EntriesController < ApplicationController
 
   def show
     @place = Place.find_by({"id" => params["id"]})
-    @entry = Entry.find_by({"id" => @place["place_id"]})
+    @entry = Entry.find_by({"place_id" => @place["id"]})
     # render entries/show view with details about place
   end
 

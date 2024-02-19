@@ -1,18 +1,18 @@
 <!-- Places detail page -->
 
-<h1> <%= @place["name"]%> </h1>
+<h1> <%= @place["name"] %></h1>
 
-
+<p>
 
 <!-- Write loop for entries-->
 
 <ul>
 <% for entry in @entries%>
-  <li>
-    <%= entry.title %>
-    <%= entry.description%>
-    <%= entry.posted_on %>
-  </li>
+
+   <h2> <%= entry.title %> </h2>
+   <h3>  <%= entry.posted_on %> </h3>
+   <li> <%= entry.description %> 
+
   <%end%>
   </ul>
    
