@@ -13,8 +13,8 @@
     <input type= date name="posted_on" >
   </p>
   
-   <!-- transfer state from the previous action to the next -->
-
+   <!-- hidden field per Chat GPT  -->
+ <input type="hidden" name="place_id" value="<%= @place["id"] %>">
 
   <button>Submit</button>
 </form>
