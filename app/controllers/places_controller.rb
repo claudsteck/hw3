@@ -23,7 +23,6 @@ class PlacesController < ApplicationController
 
     # assign user-entered form data to columns
     @place["name"] = params["name"]
-    
     # save  row
     @place.save
 
