@@ -1,4 +1,5 @@
-<h1> New Entry</h1>
+
+<h1> New Entry  </h1>
 
 <form action="/places" method="post">
   <p>
@@ -11,5 +12,14 @@
   <label for="posted_on"> Date </label>
     <input type= date name="posted_on" >
   </p>
+  
+   <!-- transfer state from the previous action to the next -->
+  <p>
+    <label for="place_id">Place</label>
+    <input type="text" name="place_id" value="<%= @place["id"] %>">
+  </p>
+
   <button>Submit</button>
 </form>
+</p>
+<p><a href="/places/<%= @place["id"] %>">Back to <%= @place["name"] %></a></p>

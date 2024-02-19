@@ -1,10 +1,11 @@
 class EntriesController < ApplicationController
   
   def new
-    @place = Place.find_by({ "id" => params["place_id"] })
+    @entry = Entry.all
     # render new view with new entry form
-  end
+  end 
 
+  
   def create
     # start with a new Post
     @entry = Entry.new
@@ -13,6 +14,8 @@ class EntriesController < ApplicationController
     @entry["title"] = params["title"]
     @entry["description"] = params["description"]
     @entry["posted_on"] = params["posted_on"]
+   
+    ## assign relationship between entry and place
     @entry["place_id"] = params["place_id"]
   #   # save Post row
     @entry.save
