@@ -1,8 +1,9 @@
 class EntriesController < ApplicationController
   
   def new
-    @place = Place.find_by(params["place_id"])
     @entry = Entry.new
+    @entry.place_id = params["place_id"]
+    
 
   end
   
