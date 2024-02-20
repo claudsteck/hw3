@@ -1,7 +1,7 @@
 class EntriesController < ApplicationController
   
   def new
-    @place = Place.find_by(params["id"])
+    @place = Place.find_by(params["place_id"])
     @entry = Entry.new
 
   end
@@ -19,6 +19,7 @@ class EntriesController < ApplicationController
     @entry["place_id"] = params["place_id"]
   #   # save Post row
     @entry.save
+
   #   # redirect user
     redirect_to "/places/"
     end
